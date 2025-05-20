@@ -1,0 +1,39 @@
+import React from 'react'
+import Button from '../common/Button';
+import avatar from './../../public/avatar2.png';
+import Image from 'next/image';
+import { Url } from 'url';
+
+interface UserProps {
+    name: string; 
+    title: string;
+    img?:Url
+    
+}
+
+const UserProfile = (
+  {name, title, img}: UserProps
+) => {
+ 
+    return (
+    <div className='flex flex-col justify-between items-center'>
+        <div  className='flex gap-8 justify-between items-center p-4'>
+            <div className='flex gap-7 items-center'>
+             <Image src={avatar} alt={''} className='w-8 h-8' />
+            <span className="flex flex-col">
+                <h2 className="font-bold text-sm text-black">
+                   {name}
+                </h2>
+                <p className="text-gray-500 text-xs">{title}</p>
+            </span>
+              <Button className='!rounded-full  !p-2' variant='primary' size='small'>message</Button>
+              
+            </div> 
+            
+      
+    </div>
+    </div>
+  )
+}
+
+export default UserProfile
