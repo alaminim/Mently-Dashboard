@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '../common/Button';
 import avatar from './../../public/avatar2.png';
 import Image from 'next/image';
 import { Url } from 'url';
@@ -13,7 +12,7 @@ interface UserProps {
 }
 
 const Activities = (
-  {name, title, img, timer}: UserProps
+  {name, title, timer}: UserProps
 ) => {
  
     return (

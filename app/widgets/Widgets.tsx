@@ -34,9 +34,13 @@ const Widgets = () => (
       )}
     </div>
     <div className="flex justify-between items-center p-2 max-w-full">
-    <Button children={'Save Changes'} className='w-1/2' size='large' variant='primary' />
-    <Button children={'Reset to Default'} className='w-1/2' size='large' variant='secondary' />
-  </div>
+    <Button className='w-1/2' size='large' variant='primary' >
+    Save Changes
+    </Button>
+    <Button  className='w-1/2' size='large' variant='secondary'>
+Reset to Default
+</Button>  
+</div>
   </div>
 )
 

@@ -4,11 +4,13 @@ import bg from './../../public/bgImage1.jpg'
 import EventCard from '../common/EventCard'
 import { Calendar, Clock, CircleUser, ForwardIcon } from 'lucide-react'
 import Button from '../common/Button'
-import Toolkit from '../components/Toolkit'
+import Toolkit, { Title } from './../components/Toolkit'
 
 const GroupCalls = () => (
   <div className='flex flex-col bg-white mt-2 w-3/4 rounded'>
-    <Toolkit title={'Group Calls'}/>
+      <Toolkit>
+    <Title>Group Calls</Title>
+      </Toolkit>
     <div className="flex justify-around scrollable">
     <EventCard size='large' className='flex flex-col justify-between'>
     <Image src={bg} alt={''} width={100} height={100} className='w-full h-1/3 rounded mb-1' />
@@ -38,7 +40,9 @@ const GroupCalls = () => (
         
       </div>
       <div className="flex justify-between">
-        <Button children={"View Participants"} className={''} size='medium' variant='secondary' />
+        <Button  className={''} size='medium' variant='secondary'>
+          View Participants
+          </Button>
         <Button className=''>Join Now
           <ForwardIcon className='w-4 h-4'/>
         </Button>
@@ -72,7 +76,9 @@ const GroupCalls = () => (
         
       </div>
       <div className="flex justify-between">
-        <Button children={"View Participants"} className={''} size='medium' variant='secondary' />
+     <Button  className={''} size='medium' variant='secondary'>
+          View Participants
+          </Button>
         <Button className='' disabled={true}>Join Now
           <ForwardIcon className='w-4 h-4'/>
         </Button>
@@ -106,7 +112,9 @@ const GroupCalls = () => (
         
       </div>
       <div className="flex justify-between">
-        <Button children={"View Participants"} className={''} size='medium' variant='secondary' />
+      <Button  className={''} size='medium' variant='secondary'>
+          View Participants
+          </Button>
         <Button className=''>Join Now
           <ForwardIcon className='w-4 h-4'/>
         </Button>

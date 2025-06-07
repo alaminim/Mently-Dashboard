@@ -1,7 +1,6 @@
-import Link from "next/link"
 import Card from "../common/Card"
 import Button from "../common/Button"
-import Toolkit from "./Toolkit"
+import Toolkit, {Title} from "./Toolkit"
 import Logo from './../../public/bgImage1.jpg';
 import Image from "next/image";
 import EventCard from "../common/EventCard";
@@ -10,7 +9,9 @@ import EventCard from "../common/EventCard";
 const ProgramsCard = () => {
   return (
     <div className="flex flex-col items-center bg-white w-auto m-2 rounded h-auto">
-        <Toolkit title={"Programs"} />
+        <Toolkit>
+        <Title>Programs Card</Title>
+        </Toolkit>
       
       <EventCard size="medium" className="mb-4 bg-gray-50 text-violet-800 p-5 h-auto" >
    <Image src={Logo} alt="Program Logo" width={50} height={50} className="w-full h-1/3 rounded-2xl " />

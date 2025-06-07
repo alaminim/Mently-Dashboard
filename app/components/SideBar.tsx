@@ -1,10 +1,10 @@
 'use client';
-import React from 'react'
-import Image from 'next/image'
-import SideBarToggle from './SideBarToggle'
-import Logo from './../../public/techrity-logo.png'
+import React, { useState } from 'react'
+import {PanelLeft, PanelRight} from 'lucide-react'
+import Logo from './Logo';
 import HelpCard from './HelpCard'
 import NavLink from './NavLink'
+
 import {
   Home,
   BookText,
@@ -20,6 +20,11 @@ import {
 
 
 const SideBar = () => {
+const [isOpen, setIsOpen] = useState(true);
+const toggleSideBar = () => {
+  setIsOpen(!isOpen);
+}
+
 
 const MenuItems = [
   { name: 'Dashboard', href: '/dashboard', icon: Home },
@@ -35,25 +40,36 @@ const MenuItems = [
 ];
 
   return (
-    <div className='bg-violet-800 '>
-      <header className='flex justify-between mb-3 p-4'>
-      <Image
-         src={Logo}
-         alt='techrity-logo'
-         width={100}
-         height={100}
-         />
-         <SideBarToggle/>
+    <div className={`${isOpen ? 'w-64' : 'w-16'} bg-violet-800 shadow-lg transition-all duration-300 ease-in-out flex flex-col`} >
+      <header  className='bg-inherit'>
+      {isOpen ? (
+             <div className='flex justify-between p-4'>
+              <Logo/>
+              <button onClick={toggleSideBar}>
+               <PanelLeft/>
+            </button>
+             </div> 
+         ) :
+         (
+          <div className=' bg-violet-800 p-4'>
+              <button onClick={toggleSideBar}>
+               <PanelRight/>
+            </button>
+             </div> 
+         )}
       </header>
       <div>
+        
     <NavLink links={MenuItems}
-      className="flex flex-col gap-2 p-2"/>
+      className="flex flex-col gap-2 p-2 flex-1/2"/>
       </div>
  
 <div className="p-2">
 <HelpCard/>
 </div>
+
     </div>
+          
   )
 }
 export default SideBar

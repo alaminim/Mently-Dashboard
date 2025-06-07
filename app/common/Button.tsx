@@ -41,7 +41,8 @@ const Button = ({
     type={type}
     disabled = {isDisabled}
     className={clsx(
-        "inline-flex items-center rounded justify-center whitespace-nowrap font-medium transition duration-300 ease-in-out",
+       "inline-flex items-center rounded justify-center whitespace-nowrap font-medium transition duration-300 ease-in-out",
+        className,
         variantClasses[variant],
         Btnsizes[size]
     )}

@@ -7,7 +7,7 @@ interface CardProps {
     size?: CardSize;
     className?: string;
     children: ReactNode;
-    image?: string;
+   
 }
 
 const sizeStyles: Record<CardSize, string> = {
@@ -16,7 +16,7 @@ const sizeStyles: Record<CardSize, string> = {
     large: 'w-96 h-72',
 };
 
-const Card = ({size = 'medium', className, children, image}: CardProps) => {
+const Card = ({size = 'medium', className, children}: CardProps) => {
   return (
     <div className={clsx(
         'bg-white rounded-2xl shadow-md p-4 transition-all duration-300', sizeStyles[size], className
