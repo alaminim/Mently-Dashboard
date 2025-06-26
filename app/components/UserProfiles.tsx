@@ -12,7 +12,7 @@ interface UserProps {
 }
 
 const UserProfiles = (
-  {name, email, img}: UserProps
+  {name, email}: UserProps
 ) => {
  
     return (

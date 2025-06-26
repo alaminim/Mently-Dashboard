@@ -45,7 +45,7 @@ export default function DashboardLayout(
         </div>
        
        
-        
+        {children}
       </main>
     </div>
     );

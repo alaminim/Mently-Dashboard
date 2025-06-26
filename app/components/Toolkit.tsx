@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { ReactElement, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { EllipsisVertical, Menu } from 'lucide-react';
 
 export const Title = ({ children }: { children: ReactNode }) => <>{children}</>;
