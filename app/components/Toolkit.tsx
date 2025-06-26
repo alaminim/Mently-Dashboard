@@ -11,11 +11,11 @@ interface HeaderProps {
 
 const ProgramToolkit = ({ children, icon: Icon }: HeaderProps) => {
   let titleContent: ReactNode = null;
-  let otherChildren: ReactNode[] = [];
+  const otherChildren: ReactNode[] = [];
 
   React.Children.forEach(children, (child) => {
     if (React.isValidElement(child) && child.type === Title) {
-      titleContent = (child as React.ReactElement<any>).props.children;
+      titleContent = (child as React.ReactElement<{children: ReactNode}>).props.children;
     } else {
       otherChildren.push(child);
     }

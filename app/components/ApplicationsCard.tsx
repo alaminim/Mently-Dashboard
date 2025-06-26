@@ -5,7 +5,9 @@ import UserProfiles from './UserProfiles'
 const ApplicationsCard = () => {
   return (
     <div className='bg-white w-1/3 shadow-md rounded mt-4'>
-        <Toolkit title={'Applications'} />
+        <Toolkit>
+          <h2>Applications</h2>
+          </Toolkit>
         <div className="mentors mb-4">
             <h4 className="text-gray-600 text-base p-2">Mentors</h4>
         <UserProfiles name={'Max Jonathan'} email={'maxjonathan@well.com'} />
