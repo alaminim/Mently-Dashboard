@@ -1,7 +1,11 @@
 import React from "react"
 
+interface Props {
+  children: React.ReactNode;
+}
 
-const page = ({children}: {children: React.ReactNode} ) => {
+
+const page = ({children}:Props ) => {
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
       <div className="w-full flex-none md:w-64">
